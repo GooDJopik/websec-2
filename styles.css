@@ -1,0 +1,190 @@
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background:#f0f2f5; 
+    color:#222; 
+}
+
+.main-container { 
+    max-width: 1100px; 
+    margin: 20px auto; 
+    padding: 0 15px; 
+}
+
+.header { 
+    text-align:center; 
+    margin-bottom:20px; 
+}
+
+.header h1 { 
+    font-size:2rem; 
+    color:#1a3d7c; 
+}
+
+.search-section { 
+    position:relative; 
+    margin-bottom:20px; 
+}
+
+#searchInput { 
+    width:100%; 
+    padding:10px; 
+    border:1px solid #1a3d7c; 
+    border-radius:6px; 
+    font-size:1rem; 
+}
+
+.suggestions { 
+    list-style:none; 
+    position:absolute; 
+    top:100%; 
+    left:0; 
+    right:0; 
+    background:#fff; 
+    border:1px solid #ccc; 
+    max-height:200px; 
+    overflow-y:auto; 
+    display:none; 
+    z-index:10; 
+}
+
+.suggestions li { 
+    padding:8px; 
+    cursor:pointer; 
+}
+
+.suggestions li:hover { 
+    background:#1a3d7c; 
+    color:#fff; 
+}
+
+.info-section { 
+    margin-bottom:20px; 
+}
+
+.group-card { 
+    background:#1a3d7c; 
+    color:#fff; 
+    padding:15px; 
+    border-radius:8px; 
+}
+
+.group-card h2 { 
+    font-size:1.5rem; 
+    margin-bottom:5px; 
+}
+
+.group-card p { 
+    font-size:0.95rem; 
+    margin-bottom:3px; 
+}
+
+.week-selector { 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    gap:15px; 
+    margin-bottom:20px; 
+}
+
+.week-selector button { 
+    padding:5px 12px; 
+    font-size:1rem; 
+    border:none; 
+    background:#1a3d7c; 
+    color:#fff; 
+    border-radius:4px; 
+    cursor:pointer; 
+}
+
+.week-selector button:disabled { 
+    opacity:0.5; 
+    cursor:not-allowed; 
+}
+
+#currentWeek { 
+    font-weight:bold; 
+    font-size:1.1rem; 
+    color:#1a3d7c; 
+}
+
+.schedule-container { 
+    background:#fff; 
+    border-radius:6px; 
+    box-shadow:0 2px 8px rgba(0,0,0,0.1); 
+    overflow-x:auto; 
+    padding:10px; 
+}
+
+.schedule-table { 
+    width:100%; 
+    border-collapse:collapse; 
+}
+
+.schedule-table th, .schedule-table td { 
+    border:1px solid #ddd; 
+    padding:8px; 
+    text-align:center; 
+    vertical-align:top; 
+}
+
+.schedule-table th { 
+    background:#e0e5ec; 
+    font-weight:600; 
+}
+
+.lesson-cell { 
+    text-align:left; 
+    padding:5px; 
+    font-size:0.9rem; 
+}
+
+.lesson-lecture { 
+    border-left:4px solid #16A086; 
+    padding-left:6px; 
+}
+
+.lesson-practice { 
+    border-left:4px solid #64B5FF; 
+    padding-left:6px; 
+}
+
+.lesson-lab { 
+    border-left:4px solid #DF5FFF; 
+    padding-left:6px; 
+}
+
+.lesson-other { 
+    border-left:4px solid #F19236; 
+    padding-left:6px; 
+}
+
+@media (max-width:768px){
+    .schedule-table { 
+        display:none; 
+    }
+
+    .mobile-day { 
+        background:#f8f8f8; 
+        margin-bottom:10px; 
+        padding:10px; 
+        border-radius:8px; 
+    }
+
+    .mobile-day h3 { 
+        color:#1a3d7c; 
+        font-size:1rem; 
+        margin-bottom:5px; 
+    }
+
+    .mobile-lesson { 
+        padding:5px; 
+        margin-bottom:4px; 
+        border-left:4px solid; 
+    }
+}

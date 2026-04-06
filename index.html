@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание SSAU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1 id="pageTitle">Расписание Самарского университета</h1>
+        </header>
+
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Введите номер группы или фамилию преподавателя">
+            <ul id="suggestions" class="suggestions"></ul>
+        </section>
+
+        <section class="info-section" id="infoSection">
+            <div class="group-card" id="groupCard">
+                <h2 id="groupName"></h2>
+                <p id="groupDetails"></p>
+                <p id="groupYear"></p>
+            </div>
+        </section>
+
+        <section class="week-selector">
+            <button id="prevWeek">&lt;</button>
+            <span id="currentWeek"></span>
+            <button id="nextWeek">&gt;</button>
+        </section>
+
+        <section id="scheduleContainer" class="schedule-container">
+            <p class="loading">Загрузка расписания...</p>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
